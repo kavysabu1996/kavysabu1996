@@ -4,25 +4,30 @@ title:  "Understanding Stable Diffusion: A Comprehensive Guide to the Fundamenta
 date:   2023-04-27 12:27:33 +0530
 categories: jekyll update
 ---
-Stable diffusion is an open-source implementation of Latent Diffusion
-Jekyll requires blog post files to be named according to the following format:
+Stable diffusion is an open-source implementation of Latent Diffusion 
 
-`YEAR-MONTH-DAY-title.MARKUP`
+**What exactly is the concept of diffusion in deep learning?** \\
+The process of progressively adding noise to an image is commonly referred to as 'diffusion' in the context of deep learning. A deep learning model that utilizes the diffusion process to model the probability distribution of a dataset is commonly referred to as a diffusion model. The diffusion process involves adding progressively more noise to the data to smooth it out, and the model is trained to invert this process by generating a sample from the probability distribution represented by the diffusion process.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+The two main processes involved are:
 
-Jekyll also offers powerful support for code snippets:
+1.  forward diffusion : add noise to the image
+2.  reverse diffusion : remove noise from the image
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Diffusion models require significant computational resources. To deal with this issue "[High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/pdf/2112.10752.pdf)" introduced latent diffusion models (LDMs). Here, we utilize encoders to reduce the data into a low-dimensional latent space, and then perform the diffusion process on the reduced data. As the resule, both forward and backward diffusions take place in the latent space. Consequently, this approach can significantly reduce the computational cost. 
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+We can rewrite the primary process in Latent Diffusion Models as follows:
+1. forward diffusion : add noise to data in latent space
+2. reverse diffusion : remove noise from data in latent space
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+
+
+
+references :  
+[coffee-bean][coffee-bean] \
+[https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e][medium1] \
+[https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166][medium2].
+
+[coffee-bean]: https://www.youtube.com/watch?v=J87hffSMB60
+[medium1]:   https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e
+[medium2]: https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166
