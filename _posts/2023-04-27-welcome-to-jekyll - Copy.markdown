@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique"
+title:  "Welcome to Upside Down!"
 date:   2023-04-27 12:27:33 +0530
 categories: jekyll update
+image: /assets/images/coldplay.jpg
 ---
-Stable diffusion is an open-source implementation of Latent Diffusion
-Jekyll requires blog post files to be named according to the following format:
+The one created by El!
 
 `YEAR-MONTH-DAY-title.MARKUP`
 
@@ -21,7 +21,10 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+![]({{ page.image | relative_url}})
+
+Checkoooooo out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
