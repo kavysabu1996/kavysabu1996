@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Stable diffusion is an open-source implementation of Latent Diffusion Jekyll requires blog post files to be named according to the following format:" />
-<meta property="og:description" content="Stable diffusion is an open-source implementation of Latent Diffusion Jekyll requires blog post files to be named according to the following format:" />
+<meta name="description" content="Stable diffusion is an open-source implementation of Latent Diffusion" />
+<meta property="og:description" content="Stable diffusion is an open-source implementation of Latent Diffusion" />
 <link rel="canonical" href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html" />
 <meta property="og:url" content="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html" />
 <meta property="og:site_name" content="ksGitVerse" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-27T12:27:33+05:30","datePublished":"2023-04-27T12:27:33+05:30","description":"Stable diffusion is an open-source implementation of Latent Diffusion Jekyll requires blog post files to be named according to the following format:","headline":"Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html"},"url":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-27T12:27:33+05:30","datePublished":"2023-04-27T12:27:33+05:30","description":"Stable diffusion is an open-source implementation of Latent Diffusion","headline":"Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html"},"url":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/kavysabu1996/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/kavysabu1996/feed.xml" title="ksGitVerse" /></head>
 <body><header class="site-header" role="banner">
@@ -47,22 +47,30 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Stable diffusion is an open-source implementation of Latent Diffusion
-Jekyll requires blog post files to be named according to the following format:</p>
+    <p>Stable diffusion is an open-source implementation of Latent Diffusion</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p><strong>What exactly is the concept of diffusion in deep learning?</strong> <br />
+The process of progressively adding noise to an image is commonly referred to as ‘diffusion’ in the context of deep learning. A deep learning model that utilizes the diffusion process to model the probability distribution of a dataset is commonly referred to as a diffusion model. The diffusion process involves adding progressively more noise to the data to smooth it out, and the model is trained to invert this process by generating a sample from the probability distribution represented by the diffusion process.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>The two main processes involved are:</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<ol>
+  <li>forward diffusion : add noise to the image</li>
+  <li>reverse diffusion : remove noise from the image</li>
+</ol>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>Diffusion models require significant computational resources. To deal with this issue “<a href="https://arxiv.org/pdf/2112.10752.pdf">High-Resolution Image Synthesis with Latent Diffusion Models</a>” introduced latent diffusion models (LDMs). Here, we utilize encoders to reduce the data into a low-dimensional latent space, and then perform the diffusion process on the reduced data. As the resule, both forward and backward diffusions take place in the latent space. Consequently, this approach can significantly reduce the computational cost.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>We can rewrite the primary process in Latent Diffusion Models as follows:</p>
+<ol>
+  <li>forward diffusion : add noise to data in latent space</li>
+  <li>reverse diffusion : remove noise from data in latent space</li>
+</ol>
+
+<p>references :<br />
+<a href="https://www.youtube.com/watch?v=J87hffSMB60">coffee-bean</a> <br />
+<a href="https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e">https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e</a> <br />
+<a href="https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166">https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166</a>.</p>
 
 
   </div><a class="u-url" href="/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html" hidden></a>
@@ -86,7 +94,7 @@ Jekyll requires blog post files to be named according to the following format:</
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>site is under construction</p>
+        <p>Work in progress!!!!!!!!!</p>
       </div>
     </div>
 
