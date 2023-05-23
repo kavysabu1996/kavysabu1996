@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "What's the scoop on DETR, the cutting-edge technology that's shaking up the scene?"
+date:   2023-04-27 12:27:33 +0530
+categories: jekyll update
+---
+
+`DETR` aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact. 
+
+So many confusing terms huh!! Let me explain these one by one
+
+### What is Object Detection
+
+We humans have ability to watch and identify things. For example, consider this image
+
+<div style="text-align:center">
+    <img src="{{ site.baseurl }}/assets/images/DETR/fig1.png" alt="Image" style="max-width:400px;">
+</div>
+
+<div style="text-align:center">
+    <a href="https://stock.adobe.com/in/search?k=dog+cat+and+bird&asset_id=81951964">image source</a>
+</div>
+
+You can identify each object by simply looking at it. Left most is dog, cat at the center, and a bird. But what about machines?<br> 
+Humans've developed techniques for machines to identify and locate things known as Object Detection. In object detection machine detects the presence of object, localize it through drawing bounding boxes and identify the class of the object. An exaple is give below. Don't confuse it with image classification. In classification problems the task of machine is to identify class of the given object, there is no need of localization. 
+
+<div style="text-align:center">
+    <img src="{{ site.baseurl }}/assets/images/DETR/fig1_box.png" alt="Image" style="max-width:400px;">
+</div>
+
+<div style="text-align:center">
+    output of DETR
+</div>
+
+Now you have idea about Object Detection. Let's then talk about the specialities of DETR mentioned earlier. <br>
+DIrect set prediction directly predicts the object class labels and their corresponding bounding boxes in a single step. It treats object detection as a regression problem, where the netowk direcly output the coordinates and class probabilities for each object.
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
