@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/kavysabu1996/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/kavysabu1996/" rel="alternate" type="text/html" /><updated>2023-05-23T23:35:42+05:30</updated><id>http://localhost:4000/kavysabu1996/feed.xml</id><title type="html">ksGitVerse</title><subtitle>Work in progress!!!!!!!!!</subtitle><entry><title type="html">AutoEncoder - Reconstructuction of MNIST</title><link href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/AE-Reconstruction-MNIST.html" rel="alternate" type="text/html" title="AutoEncoder - Reconstructuction of MNIST" /><published>2023-04-27T12:27:33+05:30</published><updated>2023-04-27T12:27:33+05:30</updated><id>http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/AE-Reconstruction-MNIST</id><content type="html" xml:base="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/AE-Reconstruction-MNIST.html"><![CDATA[]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/kavysabu1996/assets/images/coldplay.jpg" /><media:content medium="image" url="http://localhost:4000/kavysabu1996/assets/images/coldplay.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene?</title><link href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html" rel="alternate" type="text/html" title="What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene?" /><published>2023-04-27T12:27:33+05:30</published><updated>2023-04-27T12:27:33+05:30</updated><id>http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR</id><content type="html" xml:base="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html"><![CDATA[<p><code class="language-plaintext highlighter-rouge">DETR</code> aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact.</p>
 
 <p>So many confusing terms huh!! Let me explain these one by one</p>
@@ -46,6 +47,44 @@ The process of progressively adding noise to an image is commonly referred to as
   <li>reverse diffusion : remove noise from data in latent space</li>
 </ol>
 
+=======
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/kavysabu1996/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/kavysabu1996/" rel="alternate" type="text/html" /><updated>2023-05-23T23:30:22+05:30</updated><id>http://localhost:4000/kavysabu1996/feed.xml</id><title type="html">ksGitVerse</title><subtitle>Work in progress!!!!!!!!!</subtitle><entry><title type="html">Welcome to Upside Down!</title><link href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll-Copy.html" rel="alternate" type="text/html" title="Welcome to Upside Down!" /><published>2023-04-27T12:27:33+05:30</published><updated>2023-04-27T12:27:33+05:30</updated><id>http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll%20-%20Copy</id><content type="html" xml:base="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll-Copy.html"><![CDATA[<p>The one created by El!</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p><img src="/kavysabu1996/assets/images/coldplay.jpg" alt="" /></p>
+
+<p>Checkoooooo out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[The one created by El!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/kavysabu1996/assets/images/coldplay.jpg" /><media:content medium="image" url="http://localhost:4000/kavysabu1996/assets/images/coldplay.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique</title><link href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique" /><published>2023-04-27T12:27:33+05:30</published><updated>2023-04-27T12:27:33+05:30</updated><id>http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/welcome-to-jekyll.html"><![CDATA[<p>Stable diffusion is an open-source implementation of Latent Diffusion</p>
+
+<p><strong>What exactly is the concept of diffusion in deep learning?</strong> <br />
+The process of progressively adding noise to an image is commonly referred to as ‘diffusion’ in the context of deep learning. A deep learning model that utilizes the diffusion process to model the probability distribution of a dataset is commonly referred to as a diffusion model. The diffusion process involves adding progressively more noise to the data to smooth it out, and the model is trained to invert this process by generating a sample from the probability distribution represented by the diffusion process.</p>
+
+<p>The two main processes involved are:</p>
+
+<ol>
+  <li>forward diffusion : add noise to the image</li>
+  <li>reverse diffusion : remove noise from the image</li>
+</ol>
+
+<p>Diffusion models require significant computational resources. To deal with this issue “<a href="https://arxiv.org/pdf/2112.10752.pdf">High-Resolution Image Synthesis with Latent Diffusion Models</a>” introduced latent diffusion models (LDMs). Here, we utilize encoders to reduce the data into a low-dimensional latent space, and then perform the diffusion process on the reduced data. As the resule, both forward and backward diffusions take place in the latent space. Consequently, this approach can significantly reduce the computational cost.</p>
+
+<p>We can rewrite the primary process in Latent Diffusion Models as follows:</p>
+<ol>
+  <li>forward diffusion : add noise to data in latent space</li>
+  <li>reverse diffusion : remove noise from data in latent space</li>
+</ol>
+
+>>>>>>> main
 <p>references :<br />
 <a href="https://www.youtube.com/watch?v=J87hffSMB60">coffee-bean</a> <br />
 <a href="https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e">https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e</a> <br />
