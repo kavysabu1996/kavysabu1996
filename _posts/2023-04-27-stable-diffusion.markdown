@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Understanding Stable Diffusion: A Comprehensive Guide to the Fundamentals of the Powerful Deep Learning Technique"
-date:   2023-04-27 12:27:33 +0530
+date:   2023-02-27 12:27:33 +0530
 categories: jekyll update
 ---
 Stable diffusion is an open-source implementation of Latent Diffusion 

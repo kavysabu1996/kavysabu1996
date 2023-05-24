@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "What's the scoop on DETR, the cutting-edge technology that's shaking up the scene?"
-date:   2023-04-27 12:27:33 +0530
+title:  "DETR - DEtection Transformer"
+date:   2023-03-14 12:27:33 +0530
 categories: jekyll update
 ---
 
 `DETR` aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact. 
-
-So many confusing terms huh!! Let me explain these one by one
 
 ### What is Object Detection
 
@@ -18,24 +16,60 @@ We humans have ability to watch and identify things. For example, consider this 
 </div>
 
 <div style="text-align:center">
+    fig1.
     <a href="https://stock.adobe.com/in/search?k=dog+cat+and+bird&asset_id=81951964">image source</a>
 </div>
 
 You can identify each object by simply looking at it. Left most is dog, cat at the center, and a bird. But what about machines?<br> 
-Humans've developed techniques for machines to identify and locate things known as Object Detection. In object detection machine detects the presence of object, localize it through drawing bounding boxes and identify the class of the object. An exaple is give below. Don't confuse it with image classification. In classification problems the task of machine is to identify class of the given object, there is no need of localization. 
+Humans've developed techniques for machines to identify and locate things. This process known as Object Detection. In object detection machine detects the presence of object, localize it through drawing bounding boxes and identify the class of the object. An exmaple of object detection is given below.
 
 <div style="text-align:center">
     <img src="{{ site.baseurl }}/assets/images/DETR/fig1_box.png" alt="Image" style="max-width:400px;">
 </div>
 
 <div style="text-align:center">
-    output of DETR
+    fig2.output of DETR
 </div>
 
-Now you have idea about Object Detection. Let's then talk about the specialities of DETR mentioned earlier. <br>
-DIrect set prediction directly predicts the object class labels and their corresponding bounding boxes in a single step. It treats object detection as a regression problem, where the netowk direcly output the coordinates and class probabilities for each object.
+Don't confuse it with image classification. In classification problems, the task of machine is to identify class of the given object, there is no need of localization. 
+
+Here they framed object detection as a direct-set prediciton problem. Which means the model directly predicts a set of items rather than predicting individual items separately. Ordinary object detection methods perfomed their tak by predicting bounding boxes and class labels for individual objects in an image, whereas DETR predicts the entire set of objects in a single forward pass. This method eleminated requirement of prior knowledge about the number of objects present in the image. This eliminates the need for techniques like anchor boxes, non-maximum suppression, or region proposal networks that are commonly used in traditional object detection methods.
+
+### Architecture
+
+<div style="text-align:center">
+    <img src="{{ site.baseurl }}/assets/images/DETR/detr_diagram.png" alt="DETR diagram" style="max-width:800px;">
+</div>
+
+<div style="text-align:center">
+    fig3.
+    <a href="https://arxiv.org/pdf/2005.12872.pdf">image source</a>
+</div>
+
+DETR architecture contains main three components
+- CNN backbone - to extract feature representation
+- Transformer
+- Feed-forward Network - to make final detectio prediction.
+
+**Backbone**<br>
+In the first stage, image features are extracted using backbone layer. We can use any CNN models for this task. Most commonly used are RestNet-50 or ResNet-101.
+These feature vectors are then flattened, added with positional encoding vector and fed into the Transformer.
+
+**Transformer**<br>
+Transformer consits to encoder and decoder blocks. Encoder encode the spatial information of the input image into a set of fixed-length feature representations. These features capture the visual content and contextual information needed for object detection. The decoder generate a set of detection outputs based on the encoded features. It attends to the relevant features, performs object classification, predicts the number of objects, and regresses the bounding box coordinates.
+
+**Prediction feed-forward networks (FFNs)**<br> 
+The final prediction is computed by perceptron and a linear projection layer. The FFN predicts the normalized center coordinates, height and width of the box w.r.t. the input image, and the linear layer predicts the class label using a softmax function.
+
+This diagram explains the whole process
+<div style="text-align:center">
+    <img src="{{ site.baseurl }}/assets/images/DETR/detr_diagram2.png" alt="DETR diagram" style="max-width:800px;">
+</div>
+
+<div style="text-align:center">
+    fig4.
+    <a href="https://arxiv.org/pdf/2005.12872.pdf">image source</a>
+</div>
 
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+### About implementation

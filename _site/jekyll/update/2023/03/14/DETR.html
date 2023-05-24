@@ -3,21 +3,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene? | ksGitVerse</title>
+<title>DETR - DEtection Transformer | ksGitVerse</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene?" />
+<meta property="og:title" content="DETR - DEtection Transformer" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="DETR aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact." />
 <meta property="og:description" content="DETR aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact." />
-<link rel="canonical" href="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html" />
-<meta property="og:url" content="http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html" />
+<link rel="canonical" href="http://localhost:4000/kavysabu1996/jekyll/update/2023/03/14/DETR.html" />
+<meta property="og:url" content="http://localhost:4000/kavysabu1996/jekyll/update/2023/03/14/DETR.html" />
 <meta property="og:site_name" content="ksGitVerse" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-04-27T12:27:33+05:30" />
+<meta property="article:published_time" content="2023-03-14T12:27:33+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene?" />
+<meta property="twitter:title" content="DETR - DEtection Transformer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-27T12:27:33+05:30","datePublished":"2023-04-27T12:27:33+05:30","description":"DETR aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact.","headline":"What’s the scoop on DETR, the cutting-edge technology that’s shaking up the scene?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html"},"url":"http://localhost:4000/kavysabu1996/jekyll/update/2023/04/27/DETR.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-14T12:27:33+05:30","datePublished":"2023-03-14T12:27:33+05:30","description":"DETR aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact.","headline":"DETR - DEtection Transformer","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kavysabu1996/jekyll/update/2023/03/14/DETR.html"},"url":"http://localhost:4000/kavysabu1996/jekyll/update/2023/03/14/DETR.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/kavysabu1996/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/kavysabu1996/feed.xml" title="ksGitVerse" /></head>
 <body><header class="site-header" role="banner">
@@ -40,16 +40,14 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">What&#39;s the scoop on DETR, the cutting-edge technology that&#39;s shaking up the scene?</h1>
+    <h1 class="post-title p-name" itemprop="name headline">DETR - DEtection Transformer</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2023-04-27T12:27:33+05:30" itemprop="datePublished">Apr 27, 2023
+      <time class="dt-published" datetime="2023-03-14T12:27:33+05:30" itemprop="datePublished">Mar 14, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <p><code class="language-plaintext highlighter-rouge">DETR</code> aka DEtection TRansformer is a state-of-art algorithm proposed by Meta(formerly known as FaceBook) in 2020. Through DETR they introduced new method which considers object detection as a direct set prediction problem. This was the first time that Object Detection field incorporated the tansformer mechanism and this integration brought huge impact.</p>
-
-<p>So many confusing terms huh!! Let me explain these one by one</p>
 
 <h3 id="what-is-object-detection">What is Object Detection</h3>
 
@@ -60,25 +58,66 @@
 </div>
 
 <div style="text-align:center">
+    fig1.
     <a href="https://stock.adobe.com/in/search?k=dog+cat+and+bird&amp;asset_id=81951964">image source</a>
 </div>
 
 <p>You can identify each object by simply looking at it. Left most is dog, cat at the center, and a bird. But what about machines?<br /> 
-Humans’ve developed techniques for machines to identify and locate things known as Object Detection. In object detection machine detects the presence of object, localize it through drawing bounding boxes and identify the class of the object. An exaple is give below. Don’t confuse it with image classification. In classification problems the task of machine is to identify class of the given object, there is no need of localization.</p>
+Humans’ve developed techniques for machines to identify and locate things. This process known as Object Detection. In object detection machine detects the presence of object, localize it through drawing bounding boxes and identify the class of the object. An exmaple of object detection is given below.</p>
 
 <div style="text-align:center">
     <img src="/kavysabu1996/assets/images/DETR/fig1_box.png" alt="Image" style="max-width:400px;" />
 </div>
 
 <div style="text-align:center">
-    output of DETR
+    fig2.output of DETR
 </div>
 
-<p>Now you have idea about Object Detection. Let’s then talk about the specialities of DETR mentioned earlier. <br />
-DIrect set prediction directly predicts the object class labels and their corresponding bounding boxes in a single step. It treats object detection as a regression problem, where the netowk direcly output the coordinates and class probabilities for each object.</p>
+<p>Don’t confuse it with image classification. In classification problems, the task of machine is to identify class of the given object, there is no need of localization.</p>
 
+<p>Here they framed object detection as a direct-set prediciton problem. Which means the model directly predicts a set of items rather than predicting individual items separately. Ordinary object detection methods perfomed their tak by predicting bounding boxes and class labels for individual objects in an image, whereas DETR predicts the entire set of objects in a single forward pass. This method eleminated requirement of prior knowledge about the number of objects present in the image. This eliminates the need for techniques like anchor boxes, non-maximum suppression, or region proposal networks that are commonly used in traditional object detection methods.</p>
 
-  </div><a class="u-url" href="/kavysabu1996/jekyll/update/2023/04/27/DETR.html" hidden></a>
+<h3 id="architecture">Architecture</h3>
+
+<div style="text-align:center">
+    <img src="/kavysabu1996/assets/images/DETR/detr_diagram.png" alt="DETR diagram" style="max-width:800px;" />
+</div>
+
+<div style="text-align:center">
+    fig3.
+    <a href="https://arxiv.org/pdf/2005.12872.pdf">image source</a>
+</div>
+
+<p>DETR architecture contains main three components</p>
+<ul>
+  <li>CNN backbone - to extract feature representation</li>
+  <li>Transformer</li>
+  <li>Feed-forward Network - to make final detectio prediction.</li>
+</ul>
+
+<p><strong>Backbone</strong><br />
+In the first stage, image features are extracted using backbone layer. We can use any CNN models for this task. Most commonly used are RestNet-50 or ResNet-101.
+These feature vectors are then flattened, added with positional encoding vector and fed into the Transformer.</p>
+
+<p><strong>Transformer</strong><br />
+Transformer consits to encoder and decoder blocks. Encoder encode the spatial information of the input image into a set of fixed-length feature representations. These features capture the visual content and contextual information needed for object detection. The decoder generate a set of detection outputs based on the encoded features. It attends to the relevant features, performs object classification, predicts the number of objects, and regresses the bounding box coordinates.</p>
+
+<p><strong>Prediction feed-forward networks (FFNs)</strong><br /> 
+The final prediction is computed by perceptron and a linear projection layer. The FFN predicts the normalized center coordinates, height and width of the box w.r.t. the input image, and the linear layer predicts the class label using a softmax function.</p>
+
+<p>This diagram explains the whole process</p>
+<div style="text-align:center">
+    <img src="/kavysabu1996/assets/images/DETR/detr_diagram2.png" alt="DETR diagram" style="max-width:800px;" />
+</div>
+
+<div style="text-align:center">
+    fig4.
+    <a href="https://arxiv.org/pdf/2005.12872.pdf">image source</a>
+</div>
+
+<h3 id="about-implementation">About implementation</h3>
+
+  </div><a class="u-url" href="/kavysabu1996/jekyll/update/2023/03/14/DETR.html" hidden></a>
 </article>
 
       </div>
